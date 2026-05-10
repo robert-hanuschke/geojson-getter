@@ -1,0 +1,59 @@
+{
+  "name": "geojson-getter",
+  "version": "1.0.0",
+  "description": "Resolve GeoJSON for OpenStreetMap relations via OSM relation ID or Wikidata ID",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/",
+    "lint": "eslint src/",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "geojson",
+    "openstreetmap",
+    "osm",
+    "overpass",
+    "wikidata",
+    "geometry",
+    "mapping"
+  ],
+  "author": "Robert Hanuschke (https://github.com/robert-hanuschke)",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "osmtogeojson": "^3.0.0-beta.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.2",
+    "@types/osmtogeojson": "^2.2.34",
+    "@vitest/coverage-v8": "^4.1.5",
+    "eslint": "^10.3.0",
+    "jiti": "^2.7.0",
+    "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2",
+    "vitest": "^4.1.5"
+  },
+  "overrides": {
+    "osmtogeojson": {
+      "@xmldom/xmldom": "^0.8.13"
+    }
+  },
+  "eslint": {
+    "flags": [
+      "unstable_ts_config"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robert-hanuschke/geojson-getter.git"
+  }
+}
